@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
+import { Modal } from "./modal";
 
 export const StickyScroll = ({
   content,
@@ -12,12 +13,14 @@ export const StickyScroll = ({
     description: string;
     content?: React.ReactNode | any;
     progress?: number;
+    detailsContent?: React.ReactNode;
   }[];
   contentClassName?: string;
 }) => {
   const [activeCard, setActiveCard] = React.useState(0);
   const ref = useRef<HTMLDivElement | null>(null);
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   
   // Resaltado estable: detecta la sección que cruza una línea virtual
   // centrada (ajustada para móvil) usando scroll y resize.
@@ -166,6 +169,18 @@ export const StickyScroll = ({
               </div>
             </div>
           )}
+
+          {item.detailsContent && (
+            <div className="mt-6">
+              <button
+                type="button"
+                onClick={() => setOpenIndex(index)}
+                className="rounded-lg bg-white/10 px-3 py-2 text-sm font-medium text-white ring-1 ring-white/20 transition hover:bg-white/20"
+              >
+                Ver más
+              </button>
+            </div>
+          )}
         </div>
       ))}
       <div className="h-64" />
@@ -180,6 +195,18 @@ export const StickyScroll = ({
       >
         {content[activeCard].content ?? null}
       </div>
+
+      <Modal
+        open={openIndex !== null}
+        onClose={() => setOpenIndex(null)}
+        title={openIndex !== null ? content[openIndex].title : undefined}
+      >
+        {openIndex !== null ? (
+          <div className="space-y-4">
+            {content[openIndex].detailsContent}
+          </div>
+        ) : null}
+      </Modal>
     </motion.div>
   );
 };
