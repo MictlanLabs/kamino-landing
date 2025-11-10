@@ -11,6 +11,7 @@ export const StickyScroll = ({
     title: string;
     description: string;
     content?: React.ReactNode | any;
+    progress?: number;
   }[];
   contentClassName?: string;
 }) => {
@@ -83,6 +84,8 @@ export const StickyScroll = ({
     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
   }, [activeCard]);
 
+  const clampProgress = (v: number | undefined) => Math.max(0, Math.min(100, v ?? 0));
+
   return (
     <motion.div
       className="relative flex w-full justify-center gap-10 py-10"
@@ -122,23 +125,52 @@ export const StickyScroll = ({
                 {item.description}
               </motion.p>
               {/* Panel móvil por sección: muestra la card correspondiente debajo del texto */}
+          <div
+            style={{
+              backgroundImage:
+                linearGradients[index % linearGradients.length],
+            }}
+            className={cn(
+              "mt-6 w-full overflow-hidden rounded-xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm lg:hidden",
+              contentClassName,
+            )}
+          >
+            {item.content ?? null}
+          </div>
+
+          {typeof item.progress === "number" && (
+            <div className="mt-6 max-w-sm">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-slate-400">Avance</span>
+                <span className="text-sm font-semibold text-slate-200">
+                  {clampProgress(item.progress)}%
+                </span>
+              </div>
               <div
-                style={{
-                  backgroundImage:
-                    linearGradients[index % linearGradients.length],
-                }}
-                className={cn(
-                  "mt-6 w-full overflow-hidden rounded-xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm lg:hidden",
-                  contentClassName,
-                )}
+                role="progressbar"
+                aria-valuenow={clampProgress(item.progress)}
+                aria-valuemin={0}
+                aria-valuemax={100}
+                className="mt-2 h-2 w-full rounded-full bg-white/10 ring-1 ring-white/10"
               >
-                {item.content ?? null}
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: `${clampProgress(item.progress)}%` }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  className="h-full rounded-full"
+                  style={{
+                    backgroundImage:
+                      linearGradients[index % linearGradients.length],
+                  }}
+                />
               </div>
             </div>
-          ))}
-          <div className="h-64" />
+          )}
         </div>
-      </div>
+      ))}
+      <div className="h-64" />
+    </div>
+  </div>
       <div
         style={{ backgroundImage: backgroundGradient }}
         className={cn(

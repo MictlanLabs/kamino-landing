@@ -8,6 +8,7 @@ export default function Especificaciones() {
       title: "Despliegue en Railway",
       description:
         "Todos los servicios se despliegan en Railway con CI/CD, variables de entorno y logs centralizados. Facilita el escalado y la observabilidad del entorno.",
+      progress: 60,
       content: (
         <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
           <img
@@ -34,6 +35,7 @@ export default function Especificaciones() {
       title: "Microservicio de Usuarios",
       description:
         "Gestión de registro, inicio de sesión y perfiles de usuario. En progreso: definición de esquemas en PostgreSQL, endpoints REST y validación de datos.",
+      progress: 100,
       content: (
         <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
           <img
@@ -60,6 +62,7 @@ export default function Especificaciones() {
       title: "Microservicio de Puntos de Interés (POI)",
       description:
         "CRUD de puntos de interés con categorías y geolocalización. En progreso: búsquedas por radio, filtros y paginación.",
+      progress: 100,
       content: (
         <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
           <img
@@ -86,6 +89,7 @@ export default function Especificaciones() {
       title: "API Gateway",
       description:
         "Punto de entrada unificado que enruta hacia Usuarios y POI, centraliza autenticación, rate limiting y agregación de respuestas.",
+      progress: 80,
       content: (
         <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
           <img
@@ -109,9 +113,10 @@ export default function Especificaciones() {
       ),
     },
     {
-      title: "Base de datos PostgreSQL",
+      title: "Implementacion de Base de datos PostgreSQL, MySQL y Redis",
       description:
-        "Base relacional principal para persistencia. En progreso: migraciones, índices y constraints para Usuarios y POI.",
+        "Base de datos PostgreSQL para persistencia de datos estructurados, MySQL para almacenamiento de datos no estructurados y Redis para caché y sesiones.",
+      progress: 50,
       content: (
         <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
           <img
