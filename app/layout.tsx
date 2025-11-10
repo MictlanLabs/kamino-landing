@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "../components/smooth-scroll";
 import Navbar from "../components/navbar";
+import { ThemeProvider } from "next-themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,9 +36,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning={true}
       >
-        <Navbar />
-        <SmoothScroll />
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
+          <Navbar />
+          <SmoothScroll />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
