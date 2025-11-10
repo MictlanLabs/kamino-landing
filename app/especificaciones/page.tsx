@@ -255,7 +255,7 @@ export default function Especificaciones() {
           </ul>
           <div className="mt-2">
             <img
-              src="/images/especificaciones/mobile/login.png"
+              src="/images/especificaciones/mobile/1.png"
               alt="landing de la aplicacion movil"  
               className="mx-auto max-h-64 w-full rounded-md object-contain"
               loading="lazy"
@@ -267,7 +267,7 @@ export default function Especificaciones() {
       content: (
         <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
           <img
-            src="/images/especificaciones/mobile/landing.png"
+            src="/images/especificaciones/mobile/2.png"
             alt=""
             aria-hidden="true"
             className="absolute inset-0 h-full w-full scale-105 object-cover blur-md"
@@ -275,7 +275,7 @@ export default function Especificaciones() {
             decoding="async"
           />
           <img
-            src="/images/especificaciones/mobile/landing.png"
+            src="/images/especificaciones/mobile/2.png"
             width={320}
             height={240}
             className="relative z-10 max-h-full max-w-full object-contain object-center"
