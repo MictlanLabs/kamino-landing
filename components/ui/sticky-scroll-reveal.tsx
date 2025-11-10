@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { useMotionValueEvent, useScroll } from "motion/react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
@@ -16,27 +15,59 @@ export const StickyScroll = ({
   contentClassName?: string;
 }) => {
   const [activeCard, setActiveCard] = React.useState(0);
-  const ref = useRef<any>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-  const cardLength = content.length;
+  const ref = useRef<HTMLDivElement | null>(null);
+  const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+  
+  // Resaltado estable: detecta la sección que cruza una línea virtual
+  // centrada (ajustada para móvil) usando scroll y resize.
+  useEffect(() => {
+    const updateActive = () => {
+      const isMobile =
+        typeof window !== "undefined" && window.matchMedia("(max-width: 768px)").matches;
+      const centerFactor = isMobile ? 0.33 : 0.45; // más temprano en móvil
+      const centerY = window.innerHeight * centerFactor;
+      const nodes = sectionRefs.current.filter(Boolean) as HTMLElement[];
 
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const cardsBreakpoints = content.map((_, index) => index / cardLength);
-    const closestBreakpointIndex = cardsBreakpoints.reduce(
-      (acc, breakpoint, index) => {
-        const distance = Math.abs(latest - breakpoint);
-        if (distance < Math.abs(latest - cardsBreakpoints[acc])) {
-          return index;
+      let foundIndex = -1;
+      let bestIdx = 0;
+      let bestDist = Number.POSITIVE_INFINITY;
+      nodes.forEach((node, idx) => {
+        const rect = node.getBoundingClientRect();
+        const inView = rect.top <= centerY && rect.bottom >= centerY;
+        if (inView) {
+          foundIndex = idx;
         }
-        return acc;
-      },
-      0,
-    );
-    setActiveCard(closestBreakpointIndex);
-  });
+        const dist = Math.abs(rect.top + rect.height / 2 - centerY);
+        if (dist < bestDist) {
+          bestDist = dist;
+          bestIdx = idx;
+        }
+      });
+
+      const next = foundIndex >= 0 ? foundIndex : bestIdx;
+      setActiveCard((prev) => (prev !== next ? next : prev));
+    };
+
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateActive();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    // inicial
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
 
   const linearGradients = [
     "linear-gradient(to bottom right, #06b6d4, #10b981)", // cyan-500 to emerald-500
@@ -60,7 +91,14 @@ export const StickyScroll = ({
       <div className="div relative flex items-start px-4">
         <div className="max-w-2xl">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-20">
+            <div
+              key={item.title + index}
+              data-index={index}
+              ref={(el) => {
+                sectionRefs.current[index] = el;
+              }}
+              className="my-20"
+            >
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -83,9 +121,22 @@ export const StickyScroll = ({
               >
                 {item.description}
               </motion.p>
+              {/* Panel móvil por sección: muestra la card correspondiente debajo del texto */}
+              <div
+                style={{
+                  backgroundImage:
+                    linearGradients[index % linearGradients.length],
+                }}
+                className={cn(
+                  "mt-6 w-full overflow-hidden rounded-xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm lg:hidden",
+                  contentClassName,
+                )}
+              >
+                {item.content ?? null}
+              </div>
             </div>
           ))}
-          <div className="h-40" />
+          <div className="h-64" />
         </div>
       </div>
       <div
