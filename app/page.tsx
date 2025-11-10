@@ -11,6 +11,7 @@ import FeaturesSectionDemo3 from "@/components/features-section-demo-3";
 import WaitlistSection from "@/components/waitlist-section";
 import Footer from "@/components/footer";
 import { AnimatedTooltipPreview } from "@/components/animated-tooltip-preview";
+import Navbar from "@/components/navbar";
 
 
 const World = dynamic(() => import("@/components/ui/globe").then(mod => ({ default: mod.World })), {
@@ -135,6 +136,7 @@ export default function Home() {
     <div className="min-h-screen bg-black" suppressHydrationWarning={true}>
       <section className="h-screen w-full relative overflow-hidden bg-black/[0.96] antialiased bg-grid-white/[0.02]">
         <Spotlight />
+        <Navbar className="top-2" />
 
         <div className="h-full w-full max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-8 p-4 lg:p-8" suppressHydrationWarning={true}>
 
@@ -214,7 +216,7 @@ export default function Home() {
 
       
 
-      <section className="bg-black">
+      <section id="especificaciones" className="bg-black">
         <FeaturesSectionDemo1 />
       </section>
 
