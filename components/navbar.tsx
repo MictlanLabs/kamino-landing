@@ -27,13 +27,16 @@ export default function Navbar({ className }: { className?: string }) {
 
   return (
     <motion.div
-      className={cn("fixed top-4 inset-x-0 mx-auto z-50 flex justify-center", className)}
+      className={cn(
+        "fixed right-4 bottom-4 md:top-6 md:right-6 md:bottom-auto z-50",
+        className
+      )}
       initial={{ opacity: 1, y: 0 }}
       animate={{ opacity: visible ? 1 : 0, y: visible ? 0 : -10 }}
       transition={{ duration: 0.25, ease: [0.4, 0.0, 0.2, 1] }}
       style={{ pointerEvents: visible ? "auto" : "none" }}
     >
-      <Menu setActive={setActive} className="px-3 py-2 space-x-3 text-sm md:text-base">
+      <Menu setActive={setActive} className="px-2 py-1 space-x-2 text-xs sm:text-sm md:text-base">
         <Link
           href="/especificaciones"
           className="cursor-pointer text-black dark:text-white px-2 py-1 rounded-full hover:opacity-90"
