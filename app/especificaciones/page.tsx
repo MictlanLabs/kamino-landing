@@ -1,5 +1,4 @@
-
-
+import Footer from "@/components/footer";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 
 export default function Especificaciones() {
@@ -239,10 +238,57 @@ export default function Especificaciones() {
           />
         </div>
       ),
-    },
+    }, 
+    {
+      title: "App Movil",
+      description:
+        "Aplicación móvil para usuarios y administradores, con funcionalidades de registro, login, perfil, y búsqueda de POIs.",
+      progress: 30,
+      detailsContent: (
+        <div className="space-y-3">
+          <p className="text-slate-300">
+            Aplicación móvil para usuarios y administradores, con funcionalidades de registro, login, perfil, y búsqueda de POIs.
+          </p>
+          <ul className="list-disc pl-5 text-slate-300">
+            <li>Roles y permisos básicos.</li>
+          </ul>
+          <div className="mt-2">
+            <img
+              src="/images/especificaciones/mobile/login.png"
+              alt="landing de la aplicacion movil"  
+              className="mx-auto max-h-64 w-full rounded-md object-contain"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      ),
+      content: (
+        <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
+          <img
+            src="/images/especificaciones/mobile/landing.png"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full scale-105 object-cover blur-md"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="/images/especificaciones/mobile/landing.png"
+            width={320}
+            height={240}
+            className="relative z-10 max-h-full max-w-full object-contain object-center"
+            alt="Aplicación móvil"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      ),
+    }
   ];
 
   return (
+    <>
     <div className="min-h-screen bg-black px-6 py-16">
       <div className="mx-auto max-w-5xl">
         <h1 className="mb-4 text-3xl font-bold text-white md:text-4xl">
@@ -256,6 +302,9 @@ export default function Especificaciones() {
       <div className="w-full py-4">
         <StickyScroll content={content} />
       </div>
+
     </div>
+    <Footer />
+    </>
   );
 }
