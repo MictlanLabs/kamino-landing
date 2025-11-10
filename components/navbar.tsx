@@ -41,7 +41,7 @@ export default function Navbar({ className }: { className?: string }) {
           href="/especificaciones"
           className="cursor-pointer text-black dark:text-white px-2 py-1 rounded-full hover:opacity-90"
         >
-          Especificaciones
+          Avances
         </Link>
       </Menu>
     </motion.div>
