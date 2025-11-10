@@ -12,16 +12,15 @@ export default function Especificaciones() {
       detailsContent: (
         <div className="space-y-3">
           <p className="text-slate-300">
-            Despliegue automatizado con pipelines para build y release, variables de entorno seguras y logs centralizados. Monitoreo con alertas básicas y health checks.
+            Despliegue automatizado para build y release, variables de entorno seguras y logs centralizados. Monitoreo con alertas básicas y health checks.
           </p>
           <ul className="list-disc pl-5 text-slate-300">
             <li>CI/CD con ramas main y desarrollo.</li>
             <li>Entornos: staging y producción.</li>
-            <li>Auto-escalado horizontal según consumo.</li>
           </ul>
           <div className="mt-2">
             <img
-              src="/images/especificaciones/railway/railway.png"
+              src="/images/especificaciones/railway/image.png"
               alt="Panel de Railway"
               className="mx-auto max-h-64 w-full rounded-md object-contain"
               loading="lazy"
@@ -69,7 +68,7 @@ export default function Especificaciones() {
           </ul>
           <div className="mt-2">
             <img
-              src="/images/especificaciones/microUser/microUser.png"
+              src="/images/especificaciones/microUser/image.png"
               alt="Diagrama del Microservicio de Usuarios"
               className="mx-auto max-h-64 w-full rounded-md object-contain"
               loading="lazy"
@@ -117,7 +116,7 @@ export default function Especificaciones() {
           </ul>
           <div className="mt-2">
             <img
-              src="/images/especificaciones/microPlaces/microPlaces.png"
+              src="/images/especificaciones/microPlaces/image.png"
               alt="Diagrama del Microservicio de POI"
               className="mx-auto max-h-64 w-full rounded-md object-contain"
               loading="lazy"
@@ -161,11 +160,10 @@ export default function Especificaciones() {
           <ul className="list-disc pl-5 text-slate-300">
             <li>Routing dinámico a servicios internos.</li>
             <li>Agregación de datos de múltiples servicios.</li>
-            <li>Observabilidad con métricas básicas.</li>
           </ul>
           <div className="mt-2">
             <img
-              src="/images/especificaciones/gateway/gateway.png"
+              src="/images/especificaciones/gateway/image.png"
               alt="Diagrama de API Gateway"
               className="mx-auto max-h-64 w-full rounded-md object-contain"
               loading="lazy"
@@ -208,12 +206,10 @@ export default function Especificaciones() {
           </p>
           <ul className="list-disc pl-5 text-slate-300">
             <li>Índices para consultas de perfiles y geoespaciales.</li>
-            <li>Constraints para integridad referencial.</li>
-            <li>Backups automáticos en la plataforma de despliegue.</li>
           </ul>
           <div className="mt-2">
             <img
-              src="/images/especificaciones/bd/postgres.png"
+              src="/images/especificaciones/bd/image.png"
               alt="Estructura de base de datos"
               className="mx-auto max-h-64 w-full rounded-md object-contain"
               loading="lazy"
