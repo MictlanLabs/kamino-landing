@@ -3,6 +3,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { HoveredLink, Menu, MenuItem } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
+import Link from "next/link";
+
 
 export default function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
@@ -32,11 +34,12 @@ export default function Navbar({ className }: { className?: string }) {
       style={{ pointerEvents: visible ? "auto" : "none" }}
     >
       <Menu setActive={setActive} className="px-3 py-2 space-x-3 text-sm md:text-base">
-        <MenuItem setActive={setActive} active={active} item="Especificaciones">
-          <div className="flex flex-col space-y-2 text-sm">
-            <HoveredLink href="#especificaciones">Ver especificaciones</HoveredLink>
-          </div>
-        </MenuItem>
+        <Link
+          href="/especificaciones"
+          className="cursor-pointer text-black dark:text-white px-2 py-1 rounded-full hover:opacity-90"
+        >
+          Especificaciones
+        </Link>
       </Menu>
     </motion.div>
   );
