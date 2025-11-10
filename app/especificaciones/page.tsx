@@ -9,8 +9,24 @@ export default function Especificaciones() {
       description:
         "Todos los servicios se despliegan en Railway con CI/CD, variables de entorno y logs centralizados. Facilita el escalado y la observabilidad del entorno.",
       content: (
-        <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-          Despliegue en Railway
+        <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
+          <img
+            src="/images/especificaciones/railway.png"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full scale-105 object-cover blur-md"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="/images/especificaciones/railway.png"
+            width={320}
+            height={240}
+            className="relative z-10 max-h-full max-w-full object-contain object-center"
+            alt="Despliegue en Railway"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       ),
     },
@@ -19,8 +35,24 @@ export default function Especificaciones() {
       description:
         "Gestión de registro, inicio de sesión y perfiles de usuario. En progreso: definición de esquemas en PostgreSQL, endpoints REST y validación de datos.",
       content: (
-        <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,#3b82f6,#8b5cf6)] text-white">
-          Usuarios
+        <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
+          <img
+            src="/images/especificaciones/microUser.png"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full scale-105 object-cover blur-md"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="/images/especificaciones/microUser.png"
+            width={320}
+            height={240}
+            className="relative z-10 max-h-full max-w-full object-contain object-center"
+            alt="Microservicio de Usuarios"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       ),
     },
@@ -29,13 +61,23 @@ export default function Especificaciones() {
       description:
         "CRUD de puntos de interés con categorías y geolocalización. En progreso: búsquedas por radio, filtros y paginación.",
       content: (
-        <div className="flex h-full w-full items-center justify-center text-white">
+        <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
           <img
-            src="/images/map.jpg"
+            src="/images/especificaciones/microPlaces.png"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full scale-105 object-cover blur-md"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="/images/especificaciones/microPlaces.png"
             width={320}
             height={240}
-            className="h-full w-full object-cover"
+            className="relative z-10 max-h-full max-w-full object-contain object-center"
             alt="Mapa y puntos de interés"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       ),
@@ -45,8 +87,24 @@ export default function Especificaciones() {
       description:
         "Punto de entrada unificado que enruta hacia Usuarios y POI, centraliza autenticación, rate limiting y agregación de respuestas.",
       content: (
-        <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,#f97316,#eab308)] text-white">
-          API Gateway
+        <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
+          <img
+            src="/images/especificaciones/gateway.png"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full scale-105 object-cover blur-md"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="/images/especificaciones/gateway.png"
+            width={320}
+            height={240}
+            className="relative z-10 max-h-full max-w-full object-contain object-center"
+            alt="API Gateway"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       ),
     },
@@ -55,8 +113,24 @@ export default function Especificaciones() {
       description:
         "Base relacional principal para persistencia. En progreso: migraciones, índices y constraints para Usuarios y POI.",
       content: (
-        <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,#0ea5e9,#22d3ee)] text-white">
-          PostgreSQL
+        <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
+          <img
+            src="/images/especificaciones/postgres.png"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full scale-105 object-cover blur-md"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="/images/especificaciones/postgres.png"
+            width={320}
+            height={240}
+            className="relative z-10 max-h-full max-w-full object-contain object-center"
+            alt="Base de datos PostgreSQL"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       ),
     },
