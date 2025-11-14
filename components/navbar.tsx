@@ -56,7 +56,17 @@ export default function Navbar({ className }: { className?: string }) {
 
         <Link
           href="/especificaciones"
+          prefetch
           className="cursor-pointer text-black dark:text-white px-2 py-1 rounded-full hover:opacity-90"
+          onMouseEnter={() => {
+            try { performance.mark("nav-start:/especificaciones"); } catch {}
+          }}
+          onFocus={() => {
+            try { performance.mark("nav-start:/especificaciones"); } catch {}
+          }}
+          onClick={() => {
+            try { performance.mark("nav-start:/especificaciones"); } catch {}
+          }}
         >
           Avances
         </Link>

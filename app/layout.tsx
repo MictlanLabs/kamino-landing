@@ -4,6 +4,8 @@ import "./globals.css";
 import SmoothScroll from "../components/smooth-scroll";
 import Navbar from "../components/navbar";
 import { ThemeProvider } from "next-themes";
+import WebVitals from "../components/analytics/WebVitals";
+import RoutePerf from "../components/analytics/RoutePerf";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +42,8 @@ export default function RootLayout({
           <Navbar />
           <SmoothScroll />
           {children}
+          <WebVitals />
+          <RoutePerf />
         </ThemeProvider>
       </body>
     </html>
