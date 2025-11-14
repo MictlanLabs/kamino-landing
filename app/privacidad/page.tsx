@@ -19,6 +19,18 @@ export default function Privacidad() {
             cuáles son tus derechos.
           </p>
           <p className="text-white/50 mt-2">Última actualización: 13 de noviembre de 2025</p>
+          <div className="mt-6">
+            <a
+              href="/docs/terminos.pdf"
+              download
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-2 rounded-md border border-white/20 px-4 py-2 text-white hover:bg-white/10 transition"
+            >
+              <span aria-hidden>⬇</span>
+              <span>Descargar Términos y Condiciones (PDF)</span>
+            </a>
+          </div>
         </header>
 
         <nav aria-label="Tabla de contenidos" className="mb-10">
