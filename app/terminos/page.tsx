@@ -73,9 +73,24 @@ export default function Terminos() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-white mb-3">7. Contacto</h2>
+            <h2 className="text-2xl font-semibold text-white mb-3">7. Datos recopilados</h2>
+            <div>
+              <p>
+                Para la operación básica del servicio y, en su caso, la gestión de cuentas de usuario, podemos
+                recopilar los siguientes datos:
+              </p>
+              <ul className="list-disc list-inside text-white/70 mt-2">
+                <li><span className="text-white/80">Nombre</span> del usuario.</li>
+                <li><span className="text-white/80">Contraseña</span> asociada a la cuenta (almacenada de forma segura).
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-white mb-3">8. Contacto</h2>
             <p>
-              Si tienes preguntas, escríbenos a <a href="mailto:contacto@kamino.app" className="text-white underline">contacto@kamino.app</a>.
+              Si tienes preguntas, escríbenos a <a href="mailto:223260@ids.upchiapas.edu.mx" className="text-white underline">223260@ids.upchiapas.edu.mx</a>.
             </p>
           </section>
         </div>

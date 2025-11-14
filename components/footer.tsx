@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="flex gap-6 text-white/70 text-sm order-2 sm:order-3">
           <a href="/privacidad" className="hover:text-white" aria-label="Ver Política de Privacidad">Privacidad</a>
           <a href="/terminos" className="hover:text-white" aria-label="Ver Términos y Condiciones">Términos y Condiciones</a>
-          <a href="mailto:contacto@kamino.app" className="hover:text-white" aria-label="Contactar a Kamino">Contacto</a>
+          <a href="mailto:223260@ids.upchiapas.edu.mx" className="hover:text-white" aria-label="Contactar a Kamino">Contacto</a>
         </div>
       </div>
     </footer>

@@ -113,7 +113,7 @@ export default function Privacidad() {
               Puedes ejercer tus derechos de acceso, rectificación, eliminación y oposición al tratamiento de tu
               información. Para ello, contáctanos en
               {" "}
-              <a href="mailto:contacto@kamino.app" className="underline text-white hover:text-white">contacto@kamino.app</a>.
+              <a href="mailto:223260@ids.upchiapas.edu.mx" className="underline text-white hover:text-white">223260@ids.upchiapas.edu.mx</a>.
             </p>
           </section>
 
@@ -130,7 +130,7 @@ export default function Privacidad() {
             <p className="leading-relaxed">
               Si tienes preguntas o inquietudes sobre esta política, escríbenos a
               {" "}
-              <a href="mailto:contacto@kamino.app" className="underline text-white hover:text-white">contacto@kamino.app</a>.
+              <a href="mailto:223260@ids.upchiapas.edu.mx" className="underline text-white hover:text-white">223260@ids.upchiapas.edu.mx</a>.
             </p>
           </section>
         </div>
