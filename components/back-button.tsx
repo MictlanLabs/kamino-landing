@@ -18,7 +18,7 @@ export default function BackButton({ className = '' }: { className?: string }) {
       type="button"
       onClick={handleClick}
       aria-label="Regresar"
-      className={`inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-3 py-2 text-white hover:bg-white/20 transition ${className}`}
+      className={`inline-flex items-center gap-2 rounded-md border border-white/20 bg-transparent px-3 py-2 text-white hover:bg-white/10 transition ${className}`}
     >
       <span aria-hidden>←</span>
       <span>Regresar</span>
