@@ -6,17 +6,17 @@ import Image from "next/image";
 export default function FeaturesSectionDemo() {
   const features = [
     {
-      title: "Generador de Rutas Inteligentes",
+      title: "Generación Dinámica de Itinerarios",
       description:
-        "Olvídate de la parálisis por decisión. Dinos tus gustos, tu tiempo y tu humor, y crearemos un camino único solo para ti.",
+        "Input de usuario (preferencias, tiempo) procesado por IA para generar rutas optimizadas en tiempo real.",
       skeleton: <SkeletonOne />,
       className:
         "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
     },
     {
-      title: "Bitácora de Descubrimientos",
+      title: "Sistema de Registro y Memoria (Journal)",
       description:
-        "Guarda tus rutas, añade fotos y escribe notas. Tu bitácora se convierte en tu diario personal de aventuras urbanas.",
+        "Almacenamiento estructurado de la actividad del usuario, integrando medios visuales y notas textuales.",
       skeleton: <SkeletonTwo />,
       className: "border-b col-span-1 lg:col-span-2 dark:border-neutral-800",
     },
@@ -25,13 +25,12 @@ export default function FeaturesSectionDemo() {
     <div className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto">
       <div className="px-8">
         <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
-          Tu ciudad. Redescubierta.
+          Experiencia de Usuario (UX)
         </h4>
 
         <p className="text-sm lg:text-base max-w-2xl my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
-          Kamino usa IA para crear rutas únicas y narrar las historias ocultas
-          en cada esquina. Deja de ser un turista y conviértete en un
-          explorador.
+          Diseño centrado en el usuario que elimina la fricción en la toma de decisiones.
+          Desde la generación de rutas hasta el registro de experiencias, cada interacción es intuitiva y fluida.
         </p>
       </div>
 

@@ -6,11 +6,11 @@ export default function FeaturesSectionDemo() {
     <div className="py-20 lg:py-40">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <h2 className="text-3xl lg:text-5xl font-bold text-neutral-800 dark:text-white text-center">
-          Explora la ciudad como nunca antes
+          Propósito y Funcionalidades
         </h2>
         <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto text-center mt-6 text-lg">
-          Kamino convierte cada rincón en una aventura. Estas son tus
-          herramientas para descubrir el lado auténtico de la ciudad.
+          Kamino nace para resolver la desconexión entre el turista y la ciudad real. 
+          Nuestra plataforma integra tecnología avanzada para ofrecer una experiencia de exploración única.
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-4 max-w-7xl mx-auto mt-12 md:mt-20 px-4 md:px-8">
@@ -35,24 +35,24 @@ export default function FeaturesSectionDemo() {
 
 const grid = [
   {
-    title: "Rutas Inteligentes y Personalizadas",
+    title: "Algoritmo de Rutas Personalizadas",
     description:
-      "Dinos tus gustos y tu tiempo disponible. Kamino crea una ruta a pie única para ti, eliminando la fatiga de decidir.",
+      "Sistema inteligente que genera itinerarios dinámicos basados en preferencias del usuario, tiempo disponible y ubicación en tiempo real.",
   },
   {
-    title: "Narrador Urbano (IA)",
+    title: "Narrativa Generativa con IA",
     description:
-      "Convierte un simple paseo en una historia. Nuestra IA te cuenta anécdotas, datos curiosos y el contexto de cada parada.",
+      "Integración de modelos de lenguaje para transformar datos geográficos en historias inmersivas y contexto cultural relevante.",
   },
   {
-    title: "Descubrimiento de Joyas Ocultas",
+    title: "Motor de Recomendación de POIs",
     description:
-      "Ve más allá de lo turístico. Nuestro motor prioriza cafés, galerías y arte callejero que coinciden con tus gustos.",
+      "Filtrado avanzado que prioriza 'joyas ocultas' y negocios locales sobre trampas para turistas, utilizando análisis de datos.",
   },
   {
-    title: "Bitácora de Descubrimientos",
+    title: "Persistencia y Gamificación",
     description:
-      "Tu diario personal de exploración. Guarda tus rutas completadas, añade fotos y notas para revivir tus aventuras.",
+      "Registro automático de hitos (Bitácora) y sistema de logros para incentivar la exploración continua y el engagement.",
   },
 ];
 

@@ -8,6 +8,7 @@ import Image from "next/image";
 import FeaturesSectionDemo1 from "@/components/features-section-demo-1";
 import FeaturesSectionDemo2 from "@/components/features-section-demo-2";
 import FeaturesSectionDemo3 from "@/components/features-section-demo-3";
+import BusinessOpportunity from "@/components/business-opportunity";
 import WaitlistSection from "@/components/waitlist-section";
 import Footer from "@/components/footer";
 import { AnimatedTooltipPreview } from "@/components/animated-tooltip-preview";
@@ -224,6 +225,10 @@ export default function Home() {
 
       <section className="bg-black">
         <FeaturesSectionDemo3 />
+      </section>
+
+      <section className="bg-black">
+        <BusinessOpportunity />
       </section>
 
       <section className="bg-black py-8">

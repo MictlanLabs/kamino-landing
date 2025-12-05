@@ -9,35 +9,45 @@ import {
 export default function FeaturesSectionDemo() {
   const features = [
     {
-      title: "Conexión Auténtica",
+      title: "Impacto Social",
       description:
-        "No solo visites, conecta. Descubre las historias y personas que le dan vida a la ciudad, más allá de los monumentos.",
+        "Fomenta una conexión profunda entre el visitante y el entorno, promoviendo un turismo consciente y respetuoso con la identidad local.",
       icon: <IconHeart className="w-8 h-8" />,
     },
     {
-      title: "Impulsa la Economía Local",
+      title: "Impacto Económico",
       description:
-        "Damos visibilidad a pequeños cafés, artistas y tiendas locales, ayudando a distribuir el turismo de forma más justa.",
+        "Redistribución del flujo turístico hacia negocios locales y zonas menos exploradas, democratizando los ingresos del sector.",
       icon: <IconCurrencyDollar className="w-8 h-8" />,
     },
     {
-      title: "Contenido Siempre Relevante",
+      title: "Escalabilidad Técnica",
       description:
-        "Nuestra base de datos se actualiza en tiempo real con nuevos lugares, eventos y arte urbano. Siempre hay algo nuevo.",
+        "Arquitectura diseñada para actualizaciones en tiempo real y expansión global, manteniendo la relevancia del contenido.",
       icon: <IconAdjustmentsBolt className="w-8 h-8" />,
     },
     {
-      title: "Inteligencia Real",
+      title: "Innovación con ML",
       description:
-        "Usamos Machine Learning y Minería de Datos para encontrar patrones y recomendarte lugares que ni tú sabías que te gustarían.",
+        "Aplicación de Machine Learning para identificar patrones de comportamiento y refinar constantemente el motor de recomendaciones.",
       icon: <IconTerminal2 className="w-8 h-8" />,
     },
   ];
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 py-10 max-w-7xl mx-auto">
-      {features.map((feature, index) => (
-        <Feature key={feature.title} {...feature} index={index} />
-      ))}
+    <div className="relative z-10 py-10 max-w-7xl mx-auto">
+       <div className="px-8 mb-12">
+        <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
+          Visión Estratégica
+        </h4>
+        <p className="text-sm lg:text-base max-w-2xl my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
+          Más que tecnología, Kamino es una herramienta de transformación social y económica.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        {features.map((feature, index) => (
+          <Feature key={feature.title} {...feature} index={index} />
+        ))}
+      </div>
     </div>
   );
 }
