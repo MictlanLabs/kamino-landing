@@ -34,8 +34,8 @@ export default function RecommendationSystem() {
                   <IconStar className="w-6 h-6 text-[#85E6C0]" />
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold mb-1">Ranking de Joyas Ocultas</h4>
-                  <p className="text-sm text-neutral-500">Algoritmo exclusivo que puntúa lugares por su autenticidad y valor local, no solo por popularidad.</p>
+                  <h4 className="text-white font-semibold mb-1">Ranking de Popularidad de Lugares</h4>
+                  <p className="text_sm text-neutral-500">Clasificación global basada en popularidad que incluye tanto joyas ocultas como lugares ampliamente conocidos.</p>
                 </div>
               </div>
             </div>
