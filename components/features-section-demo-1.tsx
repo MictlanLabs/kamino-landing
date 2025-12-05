@@ -1,5 +1,6 @@
 import React from "react";
 import { useId } from "react";
+import RecommendationSystem from "@/components/recommendation-system";
 
 export default function FeaturesSectionDemo() {
   return (
@@ -29,6 +30,8 @@ export default function FeaturesSectionDemo() {
           </div>
         ))}
       </div>
+      
+      <RecommendationSystem />
     </div>
   );
 }
