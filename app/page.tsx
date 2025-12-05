@@ -197,7 +197,7 @@ export default function Home() {
             }}
             className="text-2xl px-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-neutral-700 dark:text-white max-w-5xl leading-relaxed lg:leading-snug text-center mx-auto"
           >
-            Con Kamino, cada calle cuenta una historia. Descubre los secretos de tu ciudad,{" "}
+            Con Kamino, descubre las joyas ocultas de tu ciudad y deja que cada calle cuente su historia,{" "}
             <Highlight
               className="text-black dark:text-white"
               style={{
